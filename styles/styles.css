@@ -83,7 +83,7 @@ nav{
     gap: 30px;
 }
 
-.skills__header, .projects__header {
+.skills__header, .projects__header, .contacts__header {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -161,6 +161,41 @@ nav{
     border-radius: 15px;
 }
 
+.projects__element:hover{
+    transform: translateY(-3px);
+}
+
+.contacts{
+    display: grid;
+    justify-content: center;
+    margin: 30px;
+}
+
+.contacts__content{
+    background-color: var(--color-main-dark);
+    padding: 30px;
+    border-radius: 15px;
+}
+
+.form__group{
+    font-size: 28px;
+    display: grid;
+    padding: 4px;
+}
+
+.form__group>label{
+    text-align: center;
+}
+
+.form__group>input,select,textarea{
+    font-size: 18px;
+}
+
+.my-contacts__container{
+    display: grid;
+    justify-content: center;
+}
+
 .btn{
     font-size: 20px;
     border-radius: 15px;
@@ -168,11 +203,21 @@ nav{
     padding: 5px;
 }
 
+.form__actions{
+    display: flex;
+    justify-content: right;
+    margin: 5px;
+}
+
+.btn--submit{
+    border-radius: 5px;
+}
+
 footer{
     text-align: center;
     background: var(--color-main);
     padding: 10px;
-    margin-top: 100px;
+    margin-top: 50px;
 }
 
 .footer__text{

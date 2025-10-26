@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <div>
+    <main>
         <header>
             <h1 class="header__title">Кивалин Никита</h1>
         </header>
@@ -20,10 +20,50 @@
                 <li class="nav__el"><a class="nav__link" href="/pages/projects.html">Проекты</a></li>
             </ul>
         </nav>
+            <section class="contacts">
+                <section class="contacts__header">
+                    <h1 class="section__article">Свяжитесь со мной</h1>
+                </section>
+                <section class="contacts__content">
+                    <form id="feedbackForm" method="dialog">
+                        <div class="form__group">
+                            <label for="name">Имя</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="email">Email</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form__group">
+                            <label for="message">Сообщение</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <div class="form__actions">
+                            <button type="button" class="btn btn--submit" onclick="submitForm()">Отправить</button>
+                        </div>
+                    </form>
+                </section>
+            </section>
 
-        <main>
-            <footer></footer>
-        </main>
-    </div>
+            <section class="my-contacts">
+                <section class="contacts__header">
+                    <h1 class="section__article">Мои контакты</h1>
+                </section>
+                <section class="my-contacts__container">
+                    <article class="contact">
+                        <h3>📨 Email: KivalinNik@mail.ru</h3>
+                    </article>
+                    <article class="contact">
+                        <h3>📱 GitHub: arnor4eck</h3>
+                    </article>
+                    <article class="contact">
+                        <h3>📍 Россия, Москва</h3>
+                    </article>
+                </section>
+            </section>
+
+            <footer><h1 class="footer__text">&copy; 2025 Все права защищены бла-бла</h1></footer>
+    </main>
+    <script src="/scripts/form.js"></script>
 </body>
 </html>
