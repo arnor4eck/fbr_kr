@@ -83,7 +83,7 @@ nav{
     gap: 30px;
 }
 
-.skills__header, .projects__header, .contacts__header {
+.skills__header, .projects__header, .contacts__header, .diary__header {
     text-align: center;
     margin-bottom: 20px;
 }
@@ -165,7 +165,7 @@ nav{
     transform: translateY(-3px);
 }
 
-.contacts{
+.contacts, .diary {
     display: grid;
     justify-content: center;
     margin: 30px;
@@ -210,6 +210,31 @@ nav{
 }
 
 .btn--submit{
+    border-radius: 5px;
+}
+
+.diary__content{
+    padding: 30px;
+    background-color: var(--color-main-dark);
+    border-radius: 15px;
+}
+
+.diary__element--date {
+    color: #909090;
+}
+
+.diary__element--done{
+    color: lightgreen;
+}
+
+.diary__element--proccess{
+    color: lightyellow;
+}
+
+.diary__element {
+    margin: 5px;
+    padding: 5px;
+    background-color: var(--color-main);
     border-radius: 5px;
 }
 
