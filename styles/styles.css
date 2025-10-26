@@ -165,7 +165,7 @@ nav{
     transform: translateY(-3px);
 }
 
-.contacts, .diary {
+.contacts, .diary, .projects__filter {
     display: grid;
     justify-content: center;
     margin: 30px;
@@ -236,6 +236,59 @@ nav{
     padding: 5px;
     background-color: var(--color-main);
     border-radius: 5px;
+}
+
+.projects__filter {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    flex-wrap: wrap;
+}
+
+.btn--filter {
+    padding: 10px 20px;
+    border: 2px solid #36296e;
+    background: white;
+    color: #36296e;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: 500;
+}
+
+.btn--filter:hover {
+    background: var(--color-main);
+    color: white;
+}
+
+.btn--filter.active {
+    background: var(--color-main);
+    color: white;
+}
+
+.project__container {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+.project__card {
+    background: var(--color-main);
+    display: grid;
+    justify-content: center;
+    border: 1px solid #e9ecef;
+    border-radius: 15px;
+    padding: 25px;
+}
+
+.project__card:hover {
+    transform: translateY(-5px);
+}
+
+.project__card.hidden {
+    display: none;
 }
 
 footer{

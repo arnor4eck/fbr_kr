@@ -20,9 +20,47 @@
                 <li class="nav__el"><a class="nav__link nav__link--active" href="/pages/projects.html">Проекты</a></li>
             </ul>
         </nav>
+
+        <div class="projects__filter">
+            <button class="btn--filter active" data-filter="all">Все</button>
+            <button class="btn--filter" data-filter="html">HTML</button>
+            <button class="btn--filter" data-filter="css">CSS</button>
+            <button class="btn--filter" data-filter="js">JS</button>
+            <button class="btn--filter" data-filter="react">React</button>
+            <button class="btn--filter" data-filter="bootstrap">Bootstrap</button>
+        </div>
+
+        <div class="project__container">
+            <div class="project__card" data-category="html css">
+                <h3>Личный сайт</h3>
+                <img class="projects__img" src="../images/icons/image.png">
+                <p>HTML, CSS</p>
+            </div>
+            <div class="project__card" data-category="js">
+                <h3>Тodo-приложение</h3>
+                <img class="projects__img" src="../images/icons/image.png">
+                <p>JavaScript</p>
+            </div>
+            <div class="project__card" data-category="react js">
+                <h3>Интернет-магазин</h3>
+                <img class="projects__img" src="../images/icons/image.png">
+                <p>React, JavaScript</p>
+            </div>
+            <div class="project__card" data-category="html css bootstrap">
+                <h3>Портфолио</h3>
+                <img class="projects__img" src="../images/icons/image.png">
+                <p>HTML, CSS, Bootstrap</p>
+            </div>
+            <div class="project__card" data-category="react bootstrap">
+                <h3>Админ-панель</h3>
+                <img class="projects__img" src="../images/icons/image.png">
+                <p>React, Bootstrap</p>
+            </div>
+        </div>
         
         
         <footer><h1 class="footer__text">&copy; 2025 Все права защищены бла-бла</h1></footer>
     </main>
+    <script src="../scripts/filter.js"></script>
 </body>
 </html>
