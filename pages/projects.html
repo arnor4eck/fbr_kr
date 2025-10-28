@@ -31,36 +31,96 @@
         </div>
 
         <div class="project__container">
-            <div class="project__card" data-category="html css">
+            <div class="project__card" data-category="html css" data-project="personal-site"
+            data-title="Личный сайт"
+            data-description="Полное описание проекта..."
+            data-technologies='["HTML", "CSS"]'
+            data-images='["image.png", "image.png"]'
+            data-demo="https://demo.com"
+            data-github="https://github.com/arnor4eck">
                 <h3>Личный сайт</h3>
                 <img class="projects__img" src="../images/icons/image.png">
                 <p>HTML, CSS</p>
             </div>
-            <div class="project__card" data-category="js">
+            <div class="project__card" data-category="js" data-project="todo-app" 
+            data-title="Todo-приложение"
+            data-description="бла-бла-бла..."
+            data-technologies='["JS"]'
+            data-images='["image.png"]'
+            data-demo="https://demo.com"
+            data-github="https://github.com/arnor4eck">
                 <h3>Тodo-приложение</h3>
                 <img class="projects__img" src="../images/icons/image.png">
                 <p>JavaScript</p>
             </div>
-            <div class="project__card" data-category="react js">
+            <div class="project__card" data-category="react js" data-project="online-store"
+            data-title="Интернет-магазин"
+            data-description="бла-бла-бла..."
+            data-technologies='["JS", "React"]'
+            data-images='["image.png"]'
+            data-demo="https://demo.com"
+            data-github="https://github.com/arnor4eck">
                 <h3>Интернет-магазин</h3>
                 <img class="projects__img" src="../images/icons/image.png">
                 <p>React, JavaScript</p>
             </div>
-            <div class="project__card" data-category="html css bootstrap">
+            <div class="project__card" data-category="html css bootstrap" data-project="portfilio"
+            data-title="Портфолио"
+            data-description="бла-бла-бла..."
+            data-technologies='["HTML", "CSS", "Bootstrap"]'
+            data-images='["image.png"]'
+            data-demo="https://demo.com"
+            data-github="https://github.com/arnor4eck">
                 <h3>Портфолио</h3>
                 <img class="projects__img" src="../images/icons/image.png">
                 <p>HTML, CSS, Bootstrap</p>
             </div>
-            <div class="project__card" data-category="react bootstrap">
-                <h3>Админ-панель</h3>
-                <img class="projects__img" src="../images/icons/image.png">
-                <p>React, Bootstrap</p>
+        </div>
+
+        <div id="projectModal" class="modal">
+            <div class="modal__content">
+                <button class="btn modal--close">&times;</button>
+            
+                <div class="modal__header">
+                    <h2 id="modalTitle">Название проекта</h2>
+                </div>
+
+                <div class="modal__body">
+                    <div class="project__details">
+                        <div class="project__description">
+                            <h3>Описание проекта</h3>
+                            <p id="modalDescription">Описание проекта...</p>
+                        </div>
+
+                        <div class="project__technologies">
+                            <h3>Технологии</h3>
+                            <div id="modalTechnologies" class="tech__list"></div>
+                        </div>
+
+                        <div class="project__links">
+                            <h3>Ссылки</h3>
+                            <div class="links__container">
+                                <a id="demoLink" href="#" class="btn">
+                                    Демо
+                                </a>
+                                <a id="githubLink" href="#" class="btn">
+                                    GitHub
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <h2 class="">Фото</h2>
+                    <div class="project__gallery" id="thumbnails">
+                    </div>
+                </div>
+                
             </div>
         </div>
-        
-        
+
         <footer><h1 class="footer__text">&copy; 2025 Все права защищены бла-бла</h1></footer>
     </main>
     <script src="../scripts/filter.js"></script>
+    <script src="../scripts/project_modal.js"></script>
 </body>
 </html>
