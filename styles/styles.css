@@ -365,8 +365,8 @@ nav{
 }
 
 .project__image {
-    max-width: 500px;
-    max-height: 500px;
+    max-width: 80%;
+    max-height: 90%;
 }
 
 .tech__list {
