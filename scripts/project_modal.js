@@ -62,7 +62,7 @@ class ProjectModal {
         const thumbnailsContainer = document.getElementById('thumbnails'); // фотки
         thumbnailsContainer.innerHTML = JSON.parse(project.dataset.images)
             .map((image, index) => 
-                `<img class="project__image" 
+                `<img loading="lazy" class="project__image" 
                      src="../images/icons/${image}" 
                      alt="Скриншот ${index + 1}"
                      data-index="${index}">`)

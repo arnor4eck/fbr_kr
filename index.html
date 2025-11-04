@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html lamg = "ru">
 <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewportfit=cover">
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Контрольная работа</title>
     <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#inf">Перейти к основному содержимому</a>
     <main>
         <header>
             <h1 class="header__title">Кивалин Никита</h1>
@@ -21,9 +22,11 @@
             </ul>
         </nav>
 
-        <section class="information">
+        <section class="information" id="inf">
             <div class="information__container">
-                <img class="information__avatar" src="./images/icons/ava.png">
+                <img class="information__avatar" src="./images/icons/ava.png" 
+                srcset="./images/icons/ava-800.png 400w,
+                        ./images/icons/ava.png 1200w" sizes="(max-width: 768px) 200px, 400px" loading="lazy">
                 <div class="about">
                     <h3>Привет! Я студент группы ЭФБО-02-24.</h3>
                     <h3>Увлекаюсь веб-разработкой</h3>
@@ -72,17 +75,17 @@
             <div class="projects__container">
                 <article class="projects__element">
                     <h1>Сайт для просмотра погоды</h1>
-                    <img class="projects__img" src="/images/icons/icon4.png">
+                    <img class="projects__img" src="./images/icons/icon4.png" loading="lazy">
                     <p>Сайт с использованием JS.</p>
                 </article>
                 <article class="projects__element">
                     <h1>Портфолио</h1>
-                    <img class="projects__img" src="/images/icons/icon1.png">
+                    <img class="projects__img" src="./images/icons/icon1.png" loading="lazy">
                     <p>Личный сайт с моими проектами</p>
                 </article>
                 <article class="projects__element">
                     <h1>Админ-панель</h1>
-                    <img class="projects__img" src="/images/icons/icon2.png">
+                    <img class="projects__img" src="./images/icons/icon2.png" loading="lazy">
                     <p>Админ-панель для компании ООО "отмыв"</p>
                 </article>
             </div>

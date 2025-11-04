@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
+    <a class="skip-link" href="#filter">Перейти к основному содержимому</a>
     <main>
         <header>
             <h1 class="header__title">Кивалин Никита</h1>
@@ -21,13 +22,13 @@
             </ul>
         </nav>
 
-        <div class="projects__filter">
-            <button class="btn--filter active" data-filter="all">Все</button>
-            <button class="btn--filter" data-filter="html">HTML</button>
-            <button class="btn--filter" data-filter="css">CSS</button>
-            <button class="btn--filter" data-filter="js">JS</button>
-            <button class="btn--filter" data-filter="react">React</button>
-            <button class="btn--filter" data-filter="bootstrap">Bootstrap</button>
+        <div class="projects__filter" id="filter">
+            <button class="btn--filter active" data-filter="all"><span class="visually-hidden">Фильтр</span>Все</button>
+            <button class="btn--filter" data-filter="html"><span class="visually-hidden">Фильтр</span>HTML</button>
+            <button class="btn--filter" data-filter="css"><span class="visually-hidden">Фильтр</span>CSS</button>
+            <button class="btn--filter" data-filter="js"><span class="visually-hidden">Фильтр</span>JS</button>
+            <button class="btn--filter" data-filter="react"><span class="visually-hidden">Фильтр</span>React</button>
+            <button class="btn--filter" data-filter="bootstrap"><span class="visually-hidden">Фильтр</span>Bootstrap</button>
         </div>
 
         <div class="project__container">
@@ -39,8 +40,9 @@
             data-demo="https://demo.com"
             data-github="https://github.com/arnor4eck">
                 <h3>Личный сайт</h3>
-                <img class="projects__img" src="../images/icons/icon5.png">
+                <img class="projects__img" src="../images/icons/icon5.png" loading="lazy">
                 <p>HTML, CSS</p>
+                <button class="visually-hidden">Проект: Личный сайт</button>
             </div>
             <div class="project__card" data-category="js" data-project="todo-app" 
             data-title="Todo-приложение"
@@ -50,8 +52,9 @@
             data-demo="https://demo.com"
             data-github="https://github.com/arnor4eck">
                 <h3>Тodo-приложение</h3>
-                <img class="projects__img" src="../images/icons/icon6.png">
+                <img class="projects__img" src="../images/icons/icon6.png" loading="lazy">
                 <p>JavaScript</p>
+                <button class="visually-hidden">Проект: Todo-приложение</button>
             </div>
             <div class="project__card" data-category="react js" data-project="online-store"
             data-title="Интернет-магазин"
@@ -61,8 +64,9 @@
             data-demo="https://demo.com"
             data-github="https://github.com/arnor4eck">
                 <h3>Интернет-магазин</h3>
-                <img class="projects__img" src="../images/icons/icon3.png">
+                <img class="projects__img" src="../images/icons/icon3.png" loading="lazy">
                 <p>React, JavaScript</p>
+                <button class="visually-hidden">Проект: Интернет-магазин</button>
             </div>
             <div class="project__card" data-category="html css bootstrap" data-project="portfilio"
             data-title="Портфолио"
@@ -72,14 +76,15 @@
             data-demo="https://demo.com"
             data-github="https://github.com/arnor4eck">
                 <h3>Портфолио</h3>
-                <img class="projects__img" src="../images/icons/icon1.png">
+                <img class="projects__img" src="../images/icons/icon1.png" loading="lazy">
                 <p>HTML, CSS, Bootstrap</p>
+                <button class="visually-hidden">Проект: Портфолио</button>
             </div>
         </div>
 
         <div id="projectModal" class="modal">
             <div class="modal__content">
-                <button class="btn modal--close">&times;</button>
+                <button class="btn modal--close">&times;<span class="visually-hidden">Закрыть окно</span></button>
             
                 <div class="modal__header">
                     <h2 id="modalTitle">Название проекта</h2>
