@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lamg = "ru">
+<html lang = "ru">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1, viewportfit=cover">
     <meta charset="UTF-8">
@@ -13,9 +13,9 @@
             <h1 class="header__title">Кивалин Никита</h1>
         </header>
 
-        <nav>
+        <nav aria-label="Основная навигация">
             <ul class="nav__list">
-                <li class="nav__el"><a class="nav__link nav__link--active" href="index.html">Главная</a></li>
+                <li class="nav__el"><a class="nav__link nav__link--active" href="index.html" aria-current="page">Главная</a></li>
                 <li class="nav__el"><a class="nav__link" href="./pages/contacts.html">Контакты</a></li>
                 <li class="nav__el"><a class="nav__link" href="./pages/diary.html">Дневник</a></li>
                 <li class="nav__el"><a class="nav__link" href="./pages/projects.html">Проекты</a></li>
@@ -24,8 +24,8 @@
 
         <section class="information" id="inf">
             <div class="information__container">
-                <img class="information__avatar" src="./images/icons/ava.png" 
-                srcset="./images/icons/ava-800.png 400w,
+                <img class="information__avatar" alt="Аватар" src="./images/icons/ava.png" 
+                srcset="./images/icons/ava-400.png 400w,
                         ./images/icons/ava.png 1200w" sizes="(max-width: 768px) 200px, 400px" loading="lazy">
                 <div class="about">
                     <h3>Привет! Я студент группы ЭФБО-02-24.</h3>
@@ -74,23 +74,23 @@
             </div>
             <div class="projects__container">
                 <article class="projects__element">
-                    <h1>Сайт для просмотра погоды</h1>
-                    <img class="projects__img" 
+                    <h2>Сайт для просмотра погоды</h2>
+                    <img class="projects__img"  alt="Сайт для просмотра погоды"
                     srcset="./images/icons/icon4-400.png 400w,
                         ./images/icons/icon4.png 1200w" 
                         sizes="(max-width: 768px) 200px, 800px" src="./images/icons/icon4.png" loading="lazy">
                     <p>Сайт с использованием JS.</p>
                 </article>
                 <article class="projects__element">
-                    <h1>Портфолио</h1>
-                    <img class="projects__img" srcset="./images/icons/icon1-400.png 400w,
+                    <h2>Портфолио</h2>
+                    <img class="projects__img" alt="Сайт портфолио" srcset="./images/icons/icon1-400.png 400w,
                         ./images/icons/icon1.png 1200w" 
                         sizes="(max-width: 768px) 200px, 800px" src="./images/icons/icon1.png" loading="lazy">
                     <p>Личный сайт с моими проектами</p>
                 </article>
                 <article class="projects__element">
-                    <h1>Админ-панель</h1>
-                    <img class="projects__img" srcset="./images/icons/icon2-400.png 400w,
+                    <h2>Админ-панель</h2>
+                    <img class="projects__img" alt="Сайт админ-панель" srcset="./images/icons/icon2-400.png 400w,
                         ./images/icons/icon2.png 1200w" 
                         sizes="(max-width: 768px) 200px, 800px" src="./images/icons/icon2.png" loading="lazy">
                     <p>Админ-панель для компании ООО "отмыв"</p>

@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lamg = "ru">
+<html lang = "ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,40 +7,40 @@
     <link rel="stylesheet" href="../styles/styles.css">
 </head>
 <body>
-    <a class="skip-link" href="#contacts">Перейти к основному содержимому</a>
+    <a class="skip-link" href="#feedbackForm">Перейти к основному содержимому</a>
     <main>
         <header>
             <h1 class="header__title">Кивалин Никита</h1>
         </header>
 
-        <nav>
+        <nav aria-label="Основная навигация">
             <ul class="nav__list">
                 <li class="nav__el"><a class="nav__link" href="../index.html">Главная</a></li>
-                <li class="nav__el"><a class="nav__link nav__link--active" href="contacts.html">Контакты</a></li>
+                <li class="nav__el"><a class="nav__link nav__link--active" href="contacts.html" aria-current="page">Контакты</a></li>
                 <li class="nav__el"><a class="nav__link" href="diary.html">Дневник</a></li>
                 <li class="nav__el"><a class="nav__link" href="projects.html">Проекты</a></li>
             </ul>
         </nav>
-            <section class="contacts" id="contacts">
+            <section class="contacts">
                 <section class="contacts__header">
-                    <h1 class="section__article"><span class="visually-hidden">Форма для обратной связи</span> Свяжитесь со мной</h1>
+                    <h1 class="section__article">Свяжитесь со мной</h1>
                 </section>
                 <section class="contacts__content">
-                    <form id="feedbackForm" method="dialog">
+                    <form id="feedbackForm" method="dialog" aria-label="Форма для обратной связи">
                         <div class="form__group">
-                            <label for="name">Имя</label>
-                            <input type="text" id="name" name="name" required>
+                            <label for="name">Имя<span class="required">*</span></label>
+                            <input type="text" id="name" name="name" required aria-required="true">
                         </div>
                         <div class="form__group">
-                            <label for="email">Email</label>
-                            <input type="email" id="email" name="email" required>
+                            <label for="email">Email<span class="required">*</span></label>
+                            <input type="email" id="email" name="email" required aria-required="true">
                         </div>
                         <div class="form__group">
-                            <label for="message">Сообщение</label>
-                            <textarea id="message" name="message" required></textarea>
+                            <label for="message">Сообщение<span class="required">*</span></label>
+                            <textarea id="message" name="message" required aria-required="true"></textarea>
                         </div>
                         <div class="form__actions">
-                            <button type="button" class="btn btn--submit" onclick="submitForm()">Отправить</button>
+                            <button type="submit" class="btn btn--submit" onclick="submitForm()">Отправить</button>
                         </div>
                     </form>
                 </section>
@@ -52,13 +52,21 @@
                 </section>
                 <section class="my-contacts__container">
                     <article class="contact">
-                        <h3>📨 Email: <a href="mailto:KivalinNik@mail.ru"><span class="visually-hidden">Адресс электронной почты</span>KivalinNik@mail.ru</a></h3>
+                        <h2>📨 Email: 
+                            <a class="contact__link" href="mailto:KivalinNik@mail.ru" 
+                            aria-label="Написать письмо на KivalinNik@mail.ru"><span aria-hidden="true">KivalinNik@mail.ru</span>
+                            </a>
+                        </h2>
                     </article>
                     <article class="contact">
-                        <h3>📱 GitHub: <a href="https://github.com/arnor4eck"><span class="visually-hidden">Ссылка на GitHub</span>arnor4eck</a></h3>
+                        <h2>📱 GitHub: 
+                            <a class="contact__link" href="https://github.com/arnor4eck" 
+                            aria-label="Перейти по ссылке https://github.com/arnor4eck"> <span>arnor4eck</span>
+                            </a>
+                        </h2>
                     </article>
                     <article class="contact">
-                        <h3>📍 Россия, Москва</h3>
+                        <h2>📍 Россия, Москва</h2>
                     </article>
                 </section>
             </section>

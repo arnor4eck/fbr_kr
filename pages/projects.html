@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lamg = "ru">
+<html lang = "ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,23 +13,60 @@
             <h1 class="header__title">Кивалин Никита</h1>
         </header>
 
-        <nav>
+        <nav aria-label="Основная навигация">
             <ul class="nav__list">
                 <li class="nav__el"><a class="nav__link" href="../index.html">Главная</a></li>
                 <li class="nav__el"><a class="nav__link" href="contacts.html">Контакты</a></li>
                 <li class="nav__el"><a class="nav__link" href="diary.html">Дневник</a></li>
-                <li class="nav__el"><a class="nav__link nav__link--active" href="projects.html">Проекты</a></li>
+                <li class="nav__el"><a class="nav__link nav__link--active" href="projects.html" aria-current="page">Проекты</a></li>
             </ul>
         </nav>
-
-        <div class="projects__filter" id="filter">
-            <button class="btn--filter active" data-filter="all"><span class="visually-hidden">Фильтр</span>Все</button>
-            <button class="btn--filter" data-filter="html"><span class="visually-hidden">Фильтр</span>HTML</button>
-            <button class="btn--filter" data-filter="css"><span class="visually-hidden">Фильтр</span>CSS</button>
-            <button class="btn--filter" data-filter="js"><span class="visually-hidden">Фильтр</span>JS</button>
-            <button class="btn--filter" data-filter="react"><span class="visually-hidden">Фильтр</span>React</button>
-            <button class="btn--filter" data-filter="bootstrap"><span class="visually-hidden">Фильтр</span>Bootstrap</button>
-        </div>
+        
+        <section class="projects__filter" id="filter" aria-label="Фильтр по использованным технологиям">
+            <div class="filter__group" role="group">
+                <button class="btn--filter active" 
+                        data-filter="all"
+                        aria-pressed="true"
+                        aria-label="Показать все проекты">
+                    Все
+                </button>
+                
+                <button class="btn--filter" 
+                        data-filter="html"
+                        aria-pressed="false"
+                        aria-label="Показать проекты с HTML">
+                    HTML
+                </button>
+                
+                <button class="btn--filter" 
+                        data-filter="css"
+                        aria-pressed="false"
+                        aria-label="Показать проекты с CSS">
+                    CSS
+                </button>
+                
+                <button class="btn--filter" 
+                        data-filter="js"
+                        aria-pressed="false"
+                        aria-label="Показать проекты с JavaScript">
+                    JS
+                </button>
+                
+                <button class="btn--filter" 
+                        data-filter="react"
+                        aria-pressed="false"
+                        aria-label="Показать проекты с React">
+                    React
+                </button>
+                
+                <button class="btn--filter" 
+                        data-filter="bootstrap"
+                        aria-pressed="false"
+                        aria-label="Показать проекты с Bootstrap">
+                    Bootstrap
+                </button>
+            </div>
+        </section>
 
         <div class="project__container">
             <div class="project__card" data-category="html css" data-project="personal-site"
@@ -39,8 +76,8 @@
             data-images='["icon1.png", "icon2.png"]'
             data-demo="https://demo.com"
             data-github="https://github.com/arnor4eck">
-                <h3>Личный сайт</h3>
-                <img class="projects__img" src="../images/icons/icon6.png" srcset="../images/icons/icon6-400.png 400w,
+                <h2 class="project__card--title">Личный сайт</h2>
+                <img alt="Фото личный сайт" class="projects__img" src="../images/icons/icon6.png" srcset="../images/icons/icon6-400.png 400w,
                         ../images/icons/icon6.png 1200w" 
                         sizes="(max-width: 768px) 200px, 800px" loading="lazy">
                 <p>HTML, CSS</p>
@@ -53,8 +90,8 @@
             data-images='["icon3.png"]'
             data-demo="https://demo.com"
             data-github="https://github.com/arnor4eck">
-                <h3>Тodo-приложение</h3>
-                <img class="projects__img" src="../images/icons/icon6.png" loading="lazy">
+                <h2 class="project__card--title">Тodo-приложение</h2>
+                <img alt="Фото Todo-приложение" class="projects__img" src="../images/icons/icon6.png" loading="lazy">
                 <p>JavaScript</p>
                 <button class="visually-hidden">Проект: Todo-приложение</button>
             </div>
@@ -65,8 +102,8 @@
             data-images='["icon4.png"]'
             data-demo="https://demo.com"
             data-github="https://github.com/arnor4eck">
-                <h3>Интернет-магазин</h3>
-                <img class="projects__img" srcset="../images/icons/icon3-300.png 300w,
+                <h2 class="project__card--title">Интернет-магазин</h2>
+                <img alt="Фото Интернет-магазин" class="projects__img" srcset="../images/icons/icon3-300.png 300w,
                         ../images/icons/icon3.png 1200w" 
                         sizes="(max-width: 768px) 200px, 800px" src="../images/icons/icon3.png" loading="lazy">
                 <p>React, JavaScript</p>
@@ -79,8 +116,8 @@
             data-images='["icon5.png"]'
             data-demo="https://demo.com"
             data-github="https://github.com/arnor4eck">
-                <h3>Портфолио</h3>
-                <img class="projects__img" srcset="../images/icons/icon1-400.png 400w,
+                <h2 class="project__card--title">Портфолио</h2>
+                <img alt="Фото портфолио" class="projects__img" srcset="../images/icons/icon1-400.png 400w,
                         ../images/icons/icon1.png 1200w" 
                         sizes="(max-width: 768px) 200px, 800px" src="../images/icons/icon1.png" loading="lazy">
                 <p>HTML, CSS, Bootstrap</p>
@@ -88,9 +125,14 @@
             </div>
         </div>
 
-        <div id="projectModal" class="modal">
+        <div id="projectModal" class="modal"
+            role="dialog"
+            aria-modal="true"
+            aria-labelledby="modal-title"
+            aria-describedby="modal-desc"
+            tabindex="-1">
             <div class="modal__content">
-                <button class="btn modal--close">&times;<span class="visually-hidden">Закрыть окно</span></button>
+                <button class="btn modal--close" aria-label="Закрыть диалоговое окно" autofocus>&times;</button>
             
                 <div class="modal__header">
                     <h2 id="modalTitle">Название проекта</h2>

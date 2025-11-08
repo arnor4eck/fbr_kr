@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lamg = "ru">
+<html lang = "ru">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,11 +13,11 @@
             <h1 class="header__title">Кивалин Никита</h1>
         </header>
 
-        <nav>
+        <nav aria-label="Основная навигация">
             <ul class="nav__list">
                 <li class="nav__el"><a class="nav__link" href="../index.html">Главная</a></li>
                 <li class="nav__el"><a class="nav__link" href="contacts.html">Контакты</a></li>
-                <li class="nav__el"><a class="nav__link nav__link--active" href="diary.html">Дневник</a></li>
+                <li class="nav__el"><a class="nav__link nav__link--active" href="diary.html" aria-current="page">Дневник</a></li>
                 <li class="nav__el"><a class="nav__link" href="projects.html">Проекты</a></li>
             </ul>
         </nav>
@@ -43,7 +43,7 @@
 
             <section class="skills">
                 <div class="skills__header">
-                    <h1 class="section__article">Мои навыки</h1>
+                    <h2 class="section__article">Мои навыки</h2>
                 </div>
                 <div class="skills__container">
                     <article class="skills__element">
@@ -68,7 +68,7 @@
             </section>
 
             <section class="diary__buttons">
-                <button class="btn btn--diary" >Добавить запись</button>
+                <button class="btn btn--diary">Добавить запись</button>
             </section>
         
             <footer><h1 class="footer__text">&copy; 2025 Все права защищены бла-бла</h1></footer>
